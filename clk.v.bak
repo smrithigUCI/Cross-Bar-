@@ -1,0 +1,14 @@
+`timescale 1ps/1ps
+module clk();
+    reg internal_c;
+    initial 
+    begin
+        internal_c = 1'b0;
+        forever 
+        begin
+            #333;
+            internal_c = ~internal_c;
+        end
+    end
+endmodule
+
